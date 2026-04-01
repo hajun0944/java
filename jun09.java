@@ -1,17 +1,17 @@
 package jump2java;
 
-public class jun10 {
+public class jun09 {
 
     int a;  // 객체변수 a
 
-    void varTest() {
-        this.a++;
+    void varTest(jun09 sample) {
+        sample.a++;
     }
 
     public static void main(String[] args) {
-        jun10 sample = new jun10();
+        jun09 sample = new jun09();
         sample.a = 1;
-        sample.varTest();
+        sample.varTest(sample);
         System.out.println(sample.a);
     }
 }
