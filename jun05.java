@@ -1,17 +1,27 @@
 package jump2java;
 
-public class jun05 {
-    int sum(int a, int b) {
-        return a + b;
-    }
+	class Animal2 {
+	    String name;
 
-    public static void main(String[] args) {
-        int a = 4;
-        int b = 42;
+	    void setName(String name) {
+	        this.name = name;
+	    }
+	}
 
-        jun05 sample = new jun05();
-        int c = sample.sum(a, b);
+	class Dog2 extends Animal2 {
+	    void sleep() {
+	        System.out.println(this.name+" zzz");
+	    }
+	}
 
-        System.out.println(c);
-    }
-}
+	class HouseDog extends Dog2 {
+	}
+
+	public class jun05 {
+	    public static void main(String[] args) {
+	        HouseDog houseDog = new HouseDog();
+	        houseDog.setName("happy");
+	        houseDog.sleep();  // happy zzz 출력
+	    }
+	}
+

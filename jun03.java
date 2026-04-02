@@ -1,23 +1,21 @@
 package jump2java;
 
-class Calculator3 {
-    int result = 0;
+	class Animal {
+	    String name;
 
-    int add(int num) {
-        result += num;
-        return result;
-    }
-}
-
-public class jun03 {
-	public static void main(String[] arg) {
-	        Calculator3 cal1 = new Calculator3();  // 계산기1 객체를 생성한다.
-	        Calculator3 cal2 = new Calculator3();  // 계산기2 객체를 생성한다.
-
-	        System.out.println(cal1.add(3));
-	        System.out.println(cal1.add(4));
-
-	        System.out.println(cal2.add(3));
-	        System.out.println(cal2.add(7));
+	    void setName(String name) {
+	        this.name = name;
 	    }
 	}
+
+	class Dog extends Animal {  // Animal 클래스를 상속한다.
+	}
+
+	public class jun03 {
+	    public static void main(String[] args) {
+	        Dog dog = new Dog();
+	        dog.setName("poppy");
+	        System.out.println(dog.name);
+	    }
+	}
+

@@ -1,14 +1,30 @@
 package jump2java;
 
-public class jun06 {
-    int sum(int a, int b) {  // a, b 는 매개변수
-        return a+b;
-    }
+	class Animal3 {
+	    String name;
 
-    public static void main(String[] args) {
-        jun06 sample = new jun06();
-        int c = sample.sum(3, 4);  // 3, 4는 인수
+	    void setName(String name) {
+	        this.name = name;
+	    }
+	}
 
-        System.out.println(c);
-    }
-}
+	class Dog3 extends Animal3 {
+	    void sleep() {
+	        System.out.println(this.name + " zzz");
+	    }
+	}
+
+	class HouseDog1 extends Dog3 {
+	    void sleep() {
+	        System.out.println(this.name + " zzz in house");
+	    }
+	}
+
+	public class jun06 {
+	    public static void main(String[] args) {
+	        HouseDog1 houseDog = new HouseDog1();
+	        houseDog.setName("happy");
+	        houseDog.sleep();  // happy zzz in house 출력
+	    }
+	}
+

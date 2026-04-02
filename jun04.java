@@ -1,24 +1,25 @@
 package jump2java;
 
-class Calculator4
+	class Animal1 {
+	    String name;
 
-{
-    static int result = 0;
-
-    static int add(int num) {
-        result += num;
-        return result;
-    }
-
-    static int sub(int num) {
-        result -= num;
-        return result;
-    }
-}
-
-public class jun04 {
-	public static void main(String[] arg) {
-		System.out.println(Calculator4.add(3));
-        System.out.println(Calculator4.sub(4));
+	    void setName(String name) {
+	        this.name = name;
+	    }
 	}
-}
+
+	class Dog1 extends Animal1 {
+	    void sleep() {
+	        System.out.println(this.name+" zzz");
+	    }
+	}
+
+	public class jun04 {
+	    public static void main(String[] args) {
+	        Dog1 dog = new Dog1();
+	        dog.setName("poppy");
+	        System.out.println(dog.name);
+	        dog.sleep();
+	    }
+	}
+

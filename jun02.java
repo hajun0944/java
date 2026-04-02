@@ -1,31 +1,22 @@
 package jump2java;
 
-	class Calculator1 {
-	    static int result = 0;
-
-	    static int add(int num) {
-	        result += num;
-	        return result;
+	class Updater {
+	    void update(Counter counter) {
+	        counter.count++;
 	    }
 	}
 
-	class Calculator2 {
-	    static int result = 0;
-
-	    static int add(int num) {
-	        result += num;
-	        return result;
-	    }
+	class Counter1 {
+	    int count = 0;  // 객체변수
 	}
-
 
 	public class jun02 {
 	    public static void main(String[] args) {
-	        System.out.println(Calculator1.add(3));
-	        System.out.println(Calculator1.add(4));
-
-	        System.out.println(Calculator2.add(3));
-	        System.out.println(Calculator2.add(7));
+	        Counter1 myCounter = new Counter1();
+	        System.out.println("before update:"+myCounter.count);
+	        Updater myUpdater = new Updater();
+	        myUpdater.update(myCounter);
+	        System.out.println("after update:"+myCounter.count);
 	    }
 	}
 
