@@ -1,18 +1,22 @@
-package jump2java;
-import java.util.ArrayList;
+package jump2java1;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class jun3 {
-	public static void main(String[] args) {
-		ArrayList<String> pocket = new ArrayList<String>();
-		pocket.add("paper");
-		pocket.add("handphone");
-		pocket.add("money");
+    public static void main(String[] args) throws IOException {
+        InputStream in = System.in;
 
-		if (pocket.contains("money")) {
-		    System.out.println("택시를 타고 가라");
-		}else {
-		    System.out.println("걸어가라");
-		}
+        int a;
+        int b;
+        int c;
 
-	}
+        a = in.read();
+        b = in.read();
+        c = in.read();
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
 }

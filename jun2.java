@@ -1,15 +1,15 @@
-package jump2java;
+package jump2java1;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class jun2 {
-	public static void main(String[] args) {
-		int money = 2000;
-		boolean hasCard = true;
+    public static void main(String[] args) throws IOException {
+        InputStream in = System.in;
 
-		if (money>=3000 || hasCard) {
-		    System.out.println("택시를 타고 가라");
-		} else {
-		    System.out.println("걸어가라");
-		}
+        int a;
+        a = in.read();
 
-	}
+        System.out.println(a);
+    }
 }
