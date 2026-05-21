@@ -1,26 +1,40 @@
 package jump2java;
 import java.util.Scanner;
 
-class Animals {
+class Animals{
 	String name;
 	int age;
 	
-	Animals(String name) {
+	Animals(String name){
 		this.name = name;
 	}
-	
-	Animals(String name, int age) {
+		
+	Animals(String name, int age){
 		this.name = name;
 		this.age = age;
 	}
-
-	public void sound() {
-		System.out.println(this.name + "멍멍");
-	}
 	
-	void changeName(String n) {
+	void changeName(String name) {
 		this.name = name;
-		System.out.println("바뀐이름:" +this.name);
+		System.out.println("바뀐 이름: " +this.name);
+	}
+}
+
+class Dog extends Animals{
+	Dog(String name, int age) {
+		super(name, age);
+	}
+	void sound() {
+		System.out.println("멍멍");
+	}
+}
+
+class Cat extends Animals{
+	Cat(String name, int age) {
+		super(name, age);
+	}
+	void sound() {
+		System.out.println("야옹");
 	}
 }
 
@@ -33,12 +47,15 @@ public class S05212 {
 		int age = sc.nextInt();
 		sc.close();
 		
-		Animals dog = new Animals(name, age);
-		Animals cat = new Animals("야옹", 2);
-		Animals dog1 = new Animals("puppy");
-		System.out.println(dog.name +" "+dog.age);
-		System.out.println(cat.name +" "+cat.age);	
+		Dog dog = new Dog(name, age);
+		Cat cat = new Cat("야옹", 2);
+		
 		dog.sound();
+		cat.sound();
 		cat.changeName("고양이");
 	}
 }
+
+
+
+
