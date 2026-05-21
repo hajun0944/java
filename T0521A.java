@@ -37,7 +37,7 @@ public class T0521A {
 		Student s2 = new Student("대중", 000000);
 		
 		s1.setScore(score);
-		System.out.println("정수는 "+s1.setScore2(score)+"점");
+		System.out.println("점수는 "+s1.setScore2(score)+"점");
 		
 	}
 }
